@@ -30,12 +30,49 @@ h1, h2, h3 {
 
 
 /* HEADER */
+section{
+    height: 9000%;
+}
+#anim{
+	background-image: url("/Img/anim.jpg");
+    background-position: center;
+	color: white;
+	padding: 100px 40px;
+	text-align: center;
+    font-family: "Candal";
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    opacity: 85%;
+}
+#sport{
+	background-image: url("/Img/sport.jpg");
+    background-position: center;
+	color: white;
+	padding: 100px 50px;
+	text-align: center;
+    font-family: "Candal";
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    opacity: 85%;
+}
+#jeux{
+    background-image: url("/Img/jeux.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+    background-position: center;
+	color: white;
+	padding: 100px 50px;
+	text-align: center;
+    font-family: "Candal";
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    opacity: 85%;
+}
+
 header nav {
 	display: -ms-flexbox;
 	display: -webkit-box;
 	display: flex;
-	justify-content: space-around;
+	    justify-content: space-around;
     background-color: #fa9702;
+  
 }
 
 header nav a {
@@ -47,40 +84,6 @@ header nav a {
 	font-family: "Candal";
 	font-size: 1.4em;
 }
-/*main*/
-#animation img{
-	-webkit-transition:-webkit-transform .9s; 
-  -moz-transition:-moz-transform .9s;       
-  -o-transition:-o-transform .9s;           
-  -ms-transition:-ms-transform .9s;        
-  transition:transform .9s;
-}
-
-#animation img:hover{
-	-webkit-transform:rotateZ(360deg), rotateY(360deg); 
-	-moz-transform:rotateZ(360deg), rotateY(360deg); 
-	-o-transform:rotateZ(360deg), rotateY(360deg);  
-	-ms-transform:rotateZ(360deg), rotateY(360deg);  
-	transform:  rotateZ(114deg);
-	
-}
-
-#Mainlogo{
-	width: 89%;
-	height: auto;
-}
-main{
-	display: flex;
-	justify-content: center;
-	text-align: center;
-	margin: 110px ;
-}
-main h2{
-	font-family: "Candal";
-	color: #fa9702;
-}
-
-/* footer*/
 footer nav p {
 	-webkit-align-self: center;
 	    -ms-flex-item-align: center;
@@ -88,7 +91,7 @@ footer nav p {
 	        align-self: center;
 	color: #fcfcfc;
 	font-family: "Candal";
-	font-size: .8em;
+	font-size: 0.8em;
 }
 
 
@@ -100,6 +103,7 @@ footer nav {
     background-color: #055cbe;
   
 }
+
 
 
 
