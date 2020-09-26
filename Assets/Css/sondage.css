@@ -6,7 +6,9 @@
 	text-decoration: none;
 }
 
-article{display: block;}
+article{
+	display: block;
+}
 
 body {
 	font-family: "Open Sans", Arial;
@@ -46,58 +48,18 @@ header nav a {
 	font-family: "Candal";
 	font-size: 1.4em;
 }
+header nav a:hover{
+	color: #008e97;
+}
 /*main*/
-#animation img{
-	-webkit-transition:-webkit-transform .9s; 
-  -moz-transition:-moz-transform .9s;       
-  -o-transition:-o-transform .9s;           
-  -ms-transition:-ms-transform .9s;        
-  transition:transform .9s;
-}
 
-#animation img:hover{
-	-webkit-transform:rotateZ(360deg), rotateY(360deg); 
-	-moz-transform:rotateZ(360deg), rotateY(360deg); 
-	-o-transform:rotateZ(360deg), rotateY(360deg);  
-	-ms-transform:rotateZ(360deg), rotateY(360deg);  
-	transform:  rotateZ(114deg);
-	
-}
-#sondage > * {
-	-webkit-box-flex: 1;
-	    -ms-flex: 1;
-	        flex: 1;
-}
-
-#sondage h2{
-	flex-basis: 100%;
-}
-
-main{
-	display: flex;
-	justify-content: center;
+main h2 {
+	color: #fa9702;
+	font-size: 1.8em;
+	font-family: "Candal";
 	text-align: center;
 }
-main h1,h2,h3,p{
-	font-family: "Candal";
-    color: #fa9702;
-}
-main .titre{
-    display: flex;
-    text-align: center;
-    justify-content: flex-end;
-    flex-direction: row;
 
-}
-#sondage{
-        -webkit-box-flex: 1;
-            -ms-flex: 1;
-                flex: 1;
-    }
-#SondImg{
-    height: 30%;
-    width: auto;
-}
 .flex {
 	display: -ms-flexbox;
 	display: -webkit-box;
@@ -109,18 +71,84 @@ main .titre{
 	-ms-flex-wrap: wrap;
 	    flex-wrap: wrap;
 }
-.anime {
-	padding: 15px;
-	border: solid black 1px;
+
+#allS > *{
+	-webkit-box-flex: 1;
+	    -ms-flex: 1;
+	        flex: 1;
 }
 
-.anime h3 {
+#allS h2{
+	flex-basis: 100%;
+}
+.wrapS{
+	display: flex;
+	flex-flow: wrap ;
+	justify-content: space-around;
+
+}
+.Sond {
+	padding: 15px;
+	border: solid black 2px;
+	margin-top: 20px;
+	background-color: #fbfbfd;
+	
+}
+.Sond p{
+	color: #008e97;
+}
+
+
+.Sond:hover{
+transform: scale(1.1);
+animation: pulsation 1.4s;
+}
+@keyframes pulsation {
+	0% {
+		transform: scale(1);
+	
+	}
+
+	50% {
+		transform: scale(1.1);
+	}
+	100% {
+		transform: scale(1.1);
+		
+	}
+}
+
+.Sond h3 {
 	font-family: "Candal", Arial;
 	text-align: center;
 	font-size: 1.2em;
 	color: #fa9702;
 	padding: 10px 0 0;
 }
+main{
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	font-family: "Candal";
+}
+
+.flex {
+	display: -ms-flexbox;
+	display: -webkit-box;
+	display: flex;
+	-ms-flex-direction: row;
+	    -webkit-box-orient: horizontal;
+	    -webkit-box-direction: normal;
+	        flex-direction: row;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+}
+#ImgS{
+	max-width: 30%;
+	display: flex;
+	margin: auto;
+}
+
 
 /* footer*/
 footer nav p {
@@ -143,29 +171,30 @@ footer nav {
   
 }
 
-
+footer{
+	position:relative;
+	bottom:0;
+	width:100%;
+	padding-top:83px;
+	height:50px;
+	}
 
 
 /* RESPONSIVE */
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 1024px) {
 	header nav a {
 		padding: 15px;
 	}
-	#tagline {
-		padding: 50px 25px;
-	}
+	
 	header nav, .flex, footer nav {
 		-ms-flex-direction: column;
 		    -webkit-box-orient: vertical;
 		    -webkit-box-direction: normal;
 		        flex-direction: column;
 	}
-	.mutualise article,
-	.dedie article,
-	.cloud article {
-		-webkit-align-self: stretch;
-		    -ms-flex-item-align: stretch;
-		            -ms-grid-row-align: stretch;
-		        align-self: stretch;
+	.wrapS{
+		display: flex;
+		flex-flow: wrap ;
+		justify-content: center;
 	}
 }

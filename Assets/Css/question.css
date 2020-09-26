@@ -51,22 +51,7 @@ header nav a:hover{
 	color: #008e97;
 }
 /*main*/
-#animation img{
-	-webkit-transition:-webkit-transform .9s; 
-  -moz-transition:-moz-transform .9s;       
-  -o-transition:-o-transform .9s;           
-  -ms-transition:-ms-transform .9s;        
-  transition:transform .9s;
-}
 
-#animation img:hover{
-	-webkit-transform:rotateZ(360deg), rotateY(360deg); 
-	-moz-transform:rotateZ(360deg), rotateY(360deg); 
-	-o-transform:rotateZ(360deg), rotateY(360deg);  
-	-ms-transform:rotateZ(360deg), rotateY(360deg);  
-	transform:  rotateZ(114deg);
-	
-}
 
 #Mainlogo{
 	width: 89%;
@@ -76,14 +61,49 @@ main{
 	display: flex;
 	justify-content: center;
 	text-align: center;
-	margin: 110px ;
+
 }
 main h2{
 	font-family: "Candal";
 	color: #008e97;
 }
-main h2:hover{
+#question{
+	display: flex; 
+	flex-flow: column wrap; 
+	max-width: 80%; 
+	margin: auto;
+}
+#question img{
+	max-width: 30%!important; 
+	display: flex; 
+	flex-flow: column wrap; 
+	margin: auto;
+}
+.check{
+	display: flex; 
+	max-width: 100%; 
+	border: solid black;
+	border-radius: 80px;
+	max-height: 50%;
+	margin-top: 15px;
+	
+}
+#checkbox{
+	visibility: hidden;
+}
+
+
+.button{
+	border-radius: 10px;
+	margin-top: 24px;
+	background-color: #fbfbfb;
+	font-family: "Open sans";
+	font-weight: 100;
+}
+.button:hover{
 	color: #fa9702;
+	font-family: "Candal";
+	
 }
 
 /* footer*/
@@ -107,10 +127,31 @@ footer nav {
   
 }
 
+footer{
+	position:relative;
+	bottom:0;
+	width:100%;
+	padding-top:70px;
+	height:50px;
+	}
 
 
 
-/* RESPONSIVE */
+/* RESPONSIVE  pc*/
+@media screen and (min-width: 1024px) {
+	#rep{
+		max-height: 145.8px;
+		max-width: 100%;
+		width: 100%;
+		display: flex;
+		flex-flow: column wrap;
+		align-self: center;
+	}
+	.check{
+		margin-right: 20px;
+	}
+}
+/* RESPONSIVE  téléphone/tablette*/
 @media screen and (max-width: 1024px) {
 	header nav a {
 		padding: 15px;
@@ -124,5 +165,5 @@ footer nav {
 		    -webkit-box-direction: normal;
 		        flex-direction: column;
 	}
-
+	
 }
