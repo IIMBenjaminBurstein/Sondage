@@ -55,7 +55,7 @@ header nav a:hover{
 /*Main*/
 
 #anim{
-	background-image: url("/Img/anim.jpg");
+	background-image: url("../../Img/anim.jpg");
     background-position: center;
 	color: white;
 	padding: 100px 40px;
@@ -65,7 +65,7 @@ header nav a:hover{
     opacity: 85%;
 }
 #sport{
-	background-image: url("/Img/sport.jpg");
+	background-image: url("../../Img/sport.jpg");
     background-position: center;
 	color: white;
 	padding: 100px 50px;
@@ -75,7 +75,7 @@ header nav a:hover{
     opacity: 85%;
 }
 #jeux{
-    background-image: url("/Img/jeux.jpg");
+    background-image: url("../../Img/jeux.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
     background-position: center;

@@ -19,13 +19,7 @@ h1, h2, h3 {
 	font-weight: normal;
 }
 
-.container {
-	max-width: 90%;
-	margin: 0 auto;
-	padding: 25px;
-	background-color: white;
 
-}
 
 
 
@@ -51,62 +45,36 @@ header nav a:hover{
 	color: #008e97;
 }
 /*main*/
-
-
-#Mainlogo{
-	width: 89%;
-	height: auto;
+table{
+	border-collapse: collapse;
+	border-spacing: 0;
 }
-main{
-	display: flex;
-	justify-content: center;
+
+
+td{
 	text-align: center;
-
+	border-bottom: solid black 1px;
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
+th{
+	border-bottom: solid black 1px;
+}
+div {
+    display: block;
+}
+
+
 main h2{
 	font-family: "Candal";
 	color: #008e97;
 }
-#question{
-	display: flex; 
-	flex-flow: column wrap; 
-	max-width: 80%; 
-	margin: auto;
-}
-#question img{
-	max-width: 30%!important; 
-	display: flex; 
-	flex-flow: column wrap; 
-	margin: auto;
-}
-.check{
-	display: flex; 
-	max-width: 100%; 
-	border: solid black;
-	border-radius: 80px;
-	max-height: 50%;
-	margin-top: 15px;
-	
-}
-#checkbox{
-	visibility: hidden;
-}
-
-
-.button{
-	border-radius: 10px;
-	margin-top: 24px;
-	background-color: #fbfbfb;
-	font-family: "Open sans";
-	font-weight: 100;
-}
-.button:hover{
+main h2:hover{
 	color: #fa9702;
-	font-family: "Candal";
-	
 }
 
 /* footer*/
+
 footer nav p {
 	-webkit-align-self: center;
 	    -ms-flex-item-align: center;
@@ -128,29 +96,30 @@ footer nav {
 }
 
 footer{
-	position:absolute;
+	position: absolute;
+	bottom: 0;
 	width:100%;
-	padding-top:70px;
 	height:50px;
 	}
 
 
-
-/* RESPONSIVE  pc*/
-@media screen and (min-width: 1024px) {
-	#rep{
-		max-height: 145.8px;
-		max-width: 100%;
-		width: 100%;
+/* RESPONSIVE */
+@media screen and (min-width: 1024px){
+	
+	.container {
 		display: flex;
-		flex-flow: column wrap;
-		align-self: center;
+		max-width: 80%;
+		margin: 0 ;
+		padding: 25px;
+		background-color: white;
+	
 	}
-	.check{
-		margin-right: 20px;
+	.score{
+		width: 100%;
+		font-size: .875rem;
+		border: none;
 	}
 }
-/* RESPONSIVE  téléphone/tablette*/
 @media screen and (max-width: 1024px) {
 	header nav a {
 		padding: 15px;
@@ -164,5 +133,19 @@ footer{
 		    -webkit-box-direction: normal;
 		        flex-direction: column;
 	}
+	.container {
+		display: flex;
+		max-width: 100%;
+		margin: 0 ;
+		padding: 25px;
+		background-color: white;
+	
+	}
+	.score{
+		width: 100%;
+		font-size: .500rem;
+		border: none;
+	}
 	
 }
+
