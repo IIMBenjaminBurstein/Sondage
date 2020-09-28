@@ -56,36 +56,40 @@ header nav a:hover{
 
 #anim{
 	background-image: url("../../Img/anim.jpg");
-    background-position: center;
+	background-position-y: top ;
+	background-size: cover;
+	background-repeat: no-repeat;
 	color: white;
-	padding: 100px 40px;
+	padding: 51px 50px;
 	text-align: center;
     font-family: "Candal";
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
-    opacity: 85%;
+	max-width: 90%;
 }
 #sport{
 	background-image: url("../../Img/sport.jpg");
     background-position: center;
 	color: white;
-	padding: 100px 50px;
+	padding: 51px 50px;
 	text-align: center;
     font-family: "Candal";
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
-    opacity: 85%;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+	max-width: 90%;
+
 }
 #jeux{
     background-image: url("../../Img/jeux.jpg");
-	background-repeat: no-repeat;
 	background-size: cover;
     background-position: center;
 	color: white;
-	padding: 100px 50px;
+	padding: 50px 50px;
 	text-align: center;
     font-family: "Candal";
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
-    opacity: 85%;
+	max-width: 90%;
+	margin-left: auto;
 }
+
 main a{
 	text-decoration: none;
 	color: #fcfcfc;
