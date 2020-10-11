@@ -144,7 +144,6 @@ function next(sondage)
 {
     //boucle des points
    
-    
 for(var m = 0; m <sondage.questions[i].answers.length; m++){
     var trueAnswer = document.getElementById("choix"+m);
     var trueAnswerNb = Number(trueAnswer.value);
