@@ -66,6 +66,17 @@ document.getElementById("sondage").innerHTML = `Sondage ${sondage1.title}`;
 
 //pop up prénom
 var name = "";
+
+function popUp() {
+    var button = document.getElementById('nameButton');
+    button.style.display = "none"
+    document.getElementById("questions").innerHTML += `<div id="formName">
+    <label id="nameQ">Comment t'apelles tu?</label>
+    <input id="name" type="text" name="input" value="">
+    <button id="confirmButton" class="button" name="button" type="submit" onclick="takeName()" id="sendName">Je confirme mon prénom</button>
+</div>`;
+}
+
 function takeName() {
     name = document.getElementById("name").value;
     console.log(name);
