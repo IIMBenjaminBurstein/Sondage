@@ -20,8 +20,8 @@ h1, h2, h3 {
 }
 
 .container {
-	max-width: 90%;
-	margin: 0 auto;
+	width: 100%;
+	
 	padding: 25px;
 	background-color: white;
 
@@ -57,6 +57,10 @@ header nav a:hover{
 	width: 89%;
 	height: auto;
 }
+main section{
+	max-width: 34%;
+	margin: 0 auto;
+}
 main{
 	display: flex;
 	justify-content: center;
@@ -66,6 +70,7 @@ main{
 main h2{
 	font-family: "Candal";
 	color: #008e97;
+	
 }
 #question{
 	display: flex; 
@@ -96,6 +101,7 @@ main h2{
 .button{
 	border-radius: 10px;
 	margin-top: 24px;
+	width: 100%;
 	background-color: #fbfbfb;
 	font-family: "Open sans";
 	font-weight: 100;
@@ -106,6 +112,39 @@ main h2{
 	
 }
 
+#rep{
+	padding-top: 20px;
+
+}
+label{
+	margin: auto;
+	font-family: "Candal";
+	font-size: 0.95em;
+	font-weight: bold;
+	color: #fa9702;
+}
+
+.answer{	
+	margin-top: 10px;
+	display: flex;
+	background-color: #faf6f6;
+	border: black solid 1px;
+}
+
+#rep,#question,#questionButton{
+	display: none;
+}
+#formName{
+	display: flex;
+	flex-flow: column wrap;
+}
+#nameQ{
+	font-family: "Candal";
+	font-size: 1.3em;
+	font-weight: bold;
+	margin-bottom: 20px;
+	margin-top: 20px;
+}
 /* footer*/
 footer nav p {
 	-webkit-align-self: center;
@@ -128,10 +167,11 @@ footer nav {
 }
 
 footer{
-	position:absolute;
+	position: fixed;
 	width:100%;
-	padding-top:70px;
+	bottom: 0 ;
 	height:50px;
+	text-align: center;
 	}
 
 
@@ -145,6 +185,9 @@ footer{
 		display: flex;
 		flex-flow: column wrap;
 		align-self: center;
+	}
+	#rep,#question{
+		display: none;
 	}
 	.check{
 		margin-right: 20px;
@@ -163,6 +206,17 @@ footer{
 		    -webkit-box-orient: vertical;
 		    -webkit-box-direction: normal;
 		        flex-direction: column;
+	}
+	.container{
+		margin-bottom: 50px;
+	}
+	.answer{
+		height: 70px;
+		display: flex;
+		align-items: center;
+	}
+	#rep,#question{
+		display: none;
 	}
 	
 }

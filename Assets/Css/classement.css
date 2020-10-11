@@ -47,7 +47,7 @@ header nav a:hover{
 /*main*/
 table{
 	border-collapse: collapse;
-	border-spacing: 0;
+	border-spacing: 0;	
 }
 
 
@@ -63,16 +63,6 @@ th{
 div {
     display: block;
 }
-
-
-main h2{
-	font-family: "Candal";
-	color: #008e97;
-}
-main h2:hover{
-	color: #fa9702;
-}
-
 /* footer*/
 
 footer nav p {
@@ -107,7 +97,7 @@ footer{
 @media screen and (min-width: 1024px){
 	
 	.container {
-		display: flex;
+		
 		max-width: 80%;
 		margin: 0 ;
 		padding: 25px;
@@ -137,8 +127,7 @@ footer{
 		display: flex;
 		max-width: 100%;
 		margin: 0 ;
-		padding: 25px;
-		background-color: white;
+		padding: 25px;	
 	
 	}
 	.score{

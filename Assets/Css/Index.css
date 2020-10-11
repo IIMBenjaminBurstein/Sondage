@@ -115,9 +115,7 @@ footer nav {
 	header nav a {
 		padding: 15px;
 	}
-	#tagline {
-		padding: 50px 25px;
-	}
+	
 	header nav, .flex, footer nav {
 		-ms-flex-direction: column;
 		    -webkit-box-orient: vertical;

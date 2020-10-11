@@ -5,9 +5,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />	
 	<!-- Perso CSS -->
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Candal|Dosis|Open+Sans">
-	<link rel="stylesheet" href="css/normalize.css" />
 	<link rel="stylesheet" href="../Assets/Css/question.css" />
-	<title>Module 11 - MindGeek</title>
+	<script async defer src="../Assets/js/question.js"></script>
+	<title>Sond</title>
 </head>
 <body>
 	<!--HEADER-->
@@ -29,36 +29,21 @@
 		</nav>
 	</header>
 	<main>
-		<div  class="container">
+		<div class="container">
 			<section>
-			<h2>Vas t-il y avoir une suite à ce manga?</h2>
-			<div id="question">	
-					<img  src="../Img/GP.png">
-				<div id="rep">
-					<div class="check">
-						<input id="checkbox" class="input"  type="checkbox" >
-						Réponse 1
+				<h1 id="userName"></h1>
+				<h2 id="sondage">.</h2>
+				<div id="questions">	
+						<img  src="../Img/S.png">
+						<div id="formName">
+							<label id="nameQ">Comment t'apelles tu?</label>
+							<input id="name" type="text" name="input" value="">
+							<button class="button" name="button" type="submit" onclick="takeName()" id="sendName">Je confirme mon prénom</button>
+						</div>
+				</div>
+					<div id="rep">
 					</div>
-					<div class="check">
-						<input id="checkbox" class="input"  type="checkbox" >
-						Réponse 2
-					</div>
-					<div class="check">
-						<input id="checkbox" class="input"  type="checkbox" >
-						Réponse 3
-					</div>
-					<div class="check">
-						<input id="checkbox" class="input"  type="checkbox" >
-						Réponse 4
-					</div>
-					<div class="check">
-						<input id="checkbox" class="input"  type="checkbox" >
-						Réponse 5
-					</div>
-					
-				</div>	
-			</div>
-			<button class="button">Valider ma réponse</button>
+				<input class="button" id="questionButton" id="send" type="submit" name="button" onclick="next(sondage1);" value="Valider"/>	
 			</section>
 			
 		</div>
