@@ -39,7 +39,7 @@ Question1.addAnswer(new Answer('Shanks', false,-1));
 Question1.addAnswer(new Answer('Monkey D. Luffy', true,1));
 
 //réponse question2
-Question2.addAnswer(new Answer('ener', true,1)); 
+Question2.addAnswer(new Answer('ener', true,3)); 
 Question2.addAnswer(new Answer('crocodile', false,-1)); 
 Question2.addAnswer(new Answer('smoker', false,-1));
 
@@ -143,14 +143,10 @@ function write(sondage)
 function next(sondage)
 {
     //boucle des points
-   
+
 for(var m = 0; m <sondage.questions[i].answers.length; m++){
-    var trueAnswer = document.getElementById("choix"+m);
-    var trueAnswerNb = Number(trueAnswer.value);
-    console.log(trueAnswerNb);
-    if( trueAnswerNb > 0){
-        pointTot += trueAnswerNb;
-        console.log("nombre de point total est de "+ pointTot);
+    if(sondage.questions[i].answers[m].isRight == true){
+        pointTot += sondage.questions[i].answers[m].point;
     }
 }
     for(var l = 0; l<sondage.questions[i].answers.length; l++){
