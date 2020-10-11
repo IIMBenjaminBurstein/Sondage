@@ -1,8 +1,9 @@
 "use strict"
 class Answer {
-    constructor(choice,isRight){
+    constructor(choice,isRight,point){
         this.choice = choice ;
         this.isRight = isRight;
+        this.point = point;
     }
 }
 class Question {
@@ -33,25 +34,25 @@ let Question3 = new Question('Boa Hanckok ou Boa Hanclok');
 let Question4 = new Question('Gold Roger ou Gol D. Roger');
 let Question5 = new Question("D'après usopp, où est ce que Zoro n'ira pas?");
 //réponse question 1
-Question1.addAnswer(new Answer('Marshall D. Teach', false)); 
-Question1.addAnswer(new Answer('Shanks', false)); 
-Question1.addAnswer(new Answer('Monkey D. Luffy', true));
+Question1.addAnswer(new Answer('Marshall D. Teach', false,-1)); 
+Question1.addAnswer(new Answer('Shanks', false,-1)); 
+Question1.addAnswer(new Answer('Monkey D. Luffy', true,1));
 
 //réponse question2
-Question2.addAnswer(new Answer('ener', true)); 
-Question2.addAnswer(new Answer('crocodile', false)); 
-Question2.addAnswer(new Answer('smoker', false));
+Question2.addAnswer(new Answer('ener', true,1)); 
+Question2.addAnswer(new Answer('crocodile', false,-1)); 
+Question2.addAnswer(new Answer('smoker', false,-1));
 
 //réponse question3
-Question3.addAnswer(new Answer('Boa Hanckok ', true)); 
-Question3.addAnswer(new Answer('Boa Hanclok', false)); 
+Question3.addAnswer(new Answer('Boa Hanckok ', true,1)); 
+Question3.addAnswer(new Answer('Boa Hanclok', false,-1)); 
 //réponse question4
-Question4.addAnswer(new Answer('Gold Roger',false )); 
-Question4.addAnswer(new Answer('Gol D. Roger', true)); 
+Question4.addAnswer(new Answer('Gold Roger',false,-1 )); 
+Question4.addAnswer(new Answer('Gol D. Roger', true,1)); 
 //réponse question5
-Question5.addAnswer(new Answer('Dormir', true)); 
-Question5.addAnswer(new Answer('Au paradis', true)); 
-Question5.addAnswer(new Answer('En enfer', false));
+Question5.addAnswer(new Answer('Dormir',true,1)); 
+Question5.addAnswer(new Answer('Au paradis', true,1)); 
+Question5.addAnswer(new Answer('En enfer', false,-1));
 
 //ajout des question dans le sondage
 sondage1.addQuestion(Question1);
@@ -122,13 +123,13 @@ function write(sondage)
         document.getElementById("question").innerHTML = ` Il n'y a plus de question `;
         document.getElementById("question").innerHTML += `<br> Vous avez ${points} points sur ${pointTot}`;
         document.getElementById("questionButton").style.display = "none";
-        if(points < (sondage.questions.length / 2)){
+        if(points < (pointTot / 2)){
             document.getElementById("question").innerHTML += `<br> Tu n'es pas très calé sur One piece ${name} :( <br> Tu as ${(points/pointTot)*100}% de bonne réponses `;
-        }else if(points >= (sondage.questions.length/2) &&  points < (sondage.questions.length *  0.80)){
+        }else if(points >= (pointTot/2) &&  points < (pointTot *  0.80)){
             document.getElementById("question").innerHTML += `<br> Pas mal du tout, tu connais One piece  ${name} :) <br> Tu as ${(points/pointTot)*100}% de bonne réponses `;
-        }else if(points >= (sondage.questions.length *  0.80) && points < sondage.questions.length ){
+        }else if(points >= (pointTot *  0.80) && points < pointTot ){
             document.getElementById("question").innerHTML += `<br> Tu est un véritable pirate ${name} :O<br> Tu as ${(points/pointTot)*100}% de bonne réponses `;
-        }else if(points === sondage.questions.length){
+        }else if(points === pointTot){
             document.getElementById("question").innerHTML += `<br>kaizoku oni ore wa naru ${name}👒👒👒  <br>  Tu as ${(points/pointTot)*100}% de bonne réponses`;
         }else{
             document.getElementById("question").innerHTML += `<br>Ce test est terminé, bravo à toi B) <br> Tu as ${(points/pointTot)*100}% de bonne réponses `;
@@ -143,6 +144,7 @@ function next(sondage)
 {
     //boucle des points
    
+    
 for(var m = 0; m <sondage.questions[i].answers.length; m++){
     var trueAnswer = document.getElementById("choix"+m);
     var trueAnswerNb = Number(trueAnswer.value);
@@ -156,10 +158,10 @@ for(var m = 0; m <sondage.questions[i].answers.length; m++){
         
         if(document.getElementById('choix'+l).checked && sondage.questions[i].answers[l].isRight == false){
             if(points > 0 ){
-                points += Number(document.getElementById('choix'+l).value);
+                points += sondage.questions[i].answers[l].point;         //Number(document.getElementById('choix'+l).value);
             }
         }else if(document.getElementById('choix'+l).checked && sondage.questions[i].answers[l].isRight == true){
-            points += Number(document.getElementById('choix'+l).value);
+            points += sondage.questions[i].answers[l].point;    //Number(document.getElementById('choix'+l).value);
         }else{
            points+=0;
         }
